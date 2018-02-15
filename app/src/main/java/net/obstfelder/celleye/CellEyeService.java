@@ -61,7 +61,7 @@ public class CellEyeService extends Service
                 initWebSocket();
             }
         }).start();
-
+        CellEyeRestartBroadcastReceiver.completeWakefulIntent(intent);
         return super.onStartCommand(intent, flags, startId);
     }
 
